@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flora Marinha: Os Jardins Submersos</title>
+    <title>Seleção Francesa na Copa do Mundo</title>
     <style>
         :root {
-            --azul-profundo: #0d2b45;
-            --azul-oceano: #203c56;
-            --verde-alga: #54b2a4;
-            --verde-claro: #8fe3d3;
-            --branco-gelo: #f4f9f9;
-            --texto-escuro: #2b2b2b;
+            --azul-franca: #002395;
+            --branco: #ffffff;
+            --vermelho-franca: #ED2939;
+            --ouro: #D4AF37;
+            --cinza-escuro: #1a1a1a;
+            --cinza-claro: #f4f4f9;
         }
 
         * {
@@ -22,205 +22,15 @@
         }
 
         body {
-            background-color: var(--branco-gelo);
-            color: var(--texto-escuro);
+            background-color: var(--cinza-claro);
+            color: var(--cinza-escuro);
             line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, var(--azul-profundo), var(--azul-oceano));
-            color: white;
+            background: linear-gradient(135deg, var(--azul-franca) 60%, var(--vermelho-franca));
+            color: var(--branco);
+            padding: 3rem 1rem;
             text-align: center;
-            padding: 4rem 1rem;
-            position: relative;
-            border-bottom: 4px solid var(--verde-alga);
-        }
+            border-bottom: 5px solid var(--ouro);
 
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Seção de Destaque / Estatísticas */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-bottom: 4px solid var(--verde-alga);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-card h3 {
-            font-size: 2.5rem;
-            color: var(--azul-profundo);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-card p {
-            font-size: 1rem;
-            color: #666;
-        }
-
-        /* Conteúdo Principal */
-        section {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            color: var(--azul-profundo);
-            font-size: 1.8rem;
-            margin-bottom: 1.2rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--verde-alga);
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: #444;
-        }
-
-        /* Grid de Aspectos Curiosos */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .feature-item {
-            background-color: var(--branco-gelo);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 5px solid var(--verde-alga);
-        }
-
-        .feature-item strong {
-            color: var(--azul-oceano);
-            display: block;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: var(--azul-profundo);
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 4rem;
-            font-size: 0.9rem;
-        }
-
-        footer p {
-            color: rgba(255, 255, 255, 0.7);
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Os Pulmões e Jardins do Oceano</h1>
-        <p>Explore a beleza oculta, a importância ecológica e os mistérios mais fascinantes da flora marinha.</p>
-    </header>
-
-    <div class="container">
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <h3>+50%</h3>
-                <p>Do oxigênio da Terra é produzido por organismos fotossintéticos marinhos.</p>
-            </div>
-            <div class="stat-card">
-                <h3>60m</h3>
-                <p>É a altura máxima que a alga gigante Kelp pode atingir, crescendo até 45cm por dia.</p>
-            </div>
-            <div class="stat-card">
-                <h3>20x</h3>
-                <p>As pradarias marinhas armazenam carbono de forma muito mais eficiente que as florestas terrestres.</p>
-            </div>
-        </div>
-
-        <section>
-            <h2>A Base da Vida no Planeta</h2>
-            <p>Embora as florestas terrestres como a Amazônia recebam a maior parte da atenção, os oceanos abrigam ecossistemas vegetais e algas que sustentam grande parte da vida na Terra. A flora marinha varia desde microalgas invisíveis a olho nu até densas florestas subaquáticas que servem de berçário para milhares de espécies animais.</p>
-        </section>
-
-        <section>
-            <h2>Aspectos Surpreendentes & Curiosidades</h2>
-            <p>Abaixo estão alguns dos fatos mais extraordinários sobre como a vegetação subaquática se adaptou para sobreviver e prosperar sob a pressão e escuridão do mar:</p>
-            
-            <div class="features-grid">
-                <div class="feature-item">
-                    <strong>1. O Verdadeiro Pulmão do Mundo</strong>
-                    O fitoplâncton marinho (microalgas flutuantes) é responsável pela produção de mais da metade do oxigênio que respiramos. Cada duas lufadas de ar que você inspira, uma vem do oceano.
-                </div>
-                <div class="feature-item">
-                    <strong>2. Plantas com Flores Verdadeiras</strong>
-                    As "gramas marinhas" (Seagrasses) não são algas. Elas são plantas terrestres que evoluíram de volta para o mar há milhões de anos. Elas possuem raízes, caules, folhas e produzem flores e sementes debaixo d'água.
-                </div>
-                <div class="feature-item">
-                    <strong>3. Florestas Gigantes de Kelp</strong>
-                    As algas Kelp formam verdadeiras florestas verticais em águas frias. Para se manterem erguidas em direção à luz do sol, elas possuem pequenos "balões" cheios de gás em suas folhas, chamados pneumatocistos.
-                </div>
-                <div class="feature-item">
-                    <strong>4. Escudos Contra Mudanças Climáticas</strong>
-                    Os manguezais e os pântanos salgados capturam carbono da atmosfera em uma taxa muito mais rápida do que as florestas tropicais terrestres, armazenando esse material orgânico em seus solos por milhares de anos.
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Algas vs. Plantas Marinhas</h2>
-            <p>Muitas pessoas confundem, mas há uma diferença crucial entre elas:</p>
-            <p>As <strong>algas</strong> não possuem raízes, caules ou folhas verdadeiras; elas absorvem nutrientes diretamente da água ao seu redor através de todo o seu corpo. Já as <strong>plantas marinhas</strong> (como as gramas marinhas) possuem sistemas de raízes complexos que fixam o sedimento e ajudam a prevenir a erosão costeira.</p>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>Página criada para portfólio no GitHub | Preservar a Flora Marinha é Salvar o Futuro do Planeta.</p>
-    </footer>
-
-</body>
-</html>
