@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleção Francesa na Copa do Mundo</title>
+    <title>Flora Marinha: Os Jardins Submersos</title>
     <style>
         :root {
-            --azul-franca: #002395;
-            --branco: #ffffff;
-            --vermelho-franca: #ED2939;
-            --ouro: #D4AF37;
-            --cinza-escuro: #1a1a1a;
-            --cinza-claro: #f4f4f9;
+            --azul-profundo: #0d2b45;
+            --azul-oceano: #203c56;
+            --verde-alga: #54b2a4;
+            --verde-claro: #8fe3d3;
+            --branco-gelo: #f4f9f9;
+            --texto-escuro: #2b2b2b;
         }
 
         * {
@@ -22,52 +22,54 @@
         }
 
         body {
-            background-color: var(--cinza-claro);
-            color: var(--cinza-escuro);
+            background-color: var(--branco-gelo);
+            color: var(--texto-escuro);
             line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, var(--azul-franca) 60%, var(--vermelho-franca));
-            color: var(--branco);
-            padding: 3rem 1rem;
+            background: linear-gradient(135deg, var(--azul-profundo), var(--azul-oceano));
+            color: white;
             text-align: center;
-            border-bottom: 5px solid var(--ouro);
+            padding: 4rem 1rem;
+            position: relative;
+            border-bottom: 4px solid var(--verde-alga);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         header p {
             font-size: 1.2rem;
-            font-style: italic;
-            opacity: 0.9;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .container {
             max-width: 1100px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
         }
 
-        .grid-stats {
+        /* Seção de Destaque / Estatísticas */
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin-bottom: 3rem;
         }
 
         .stat-card {
-            background-color: var(--branco);
-            padding: 1.5rem;
-            border-radius: 8px;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--azul-franca);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--verde-alga);
             transition: transform 0.3s ease;
         }
 
@@ -75,117 +77,4 @@
             transform: translateY(-5px);
         }
 
-        .stat-card h3 {
-            font-size: 2.5rem;
-            color: var(--vermelho-franca);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-card.campeao {
-            border-top: 4px solid var(--ouro);
-            background: linear-gradient(to bottom, #fff, #fff9e6);
-        }
-
-        .stat-card.campeao h3 {
-            color: var(--ouro);
-        }
-
-        section {
-            background-color: var(--branco);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            color: var(--azul-franca);
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--cinza-claro);
-            padding-bottom: 0.5rem;
-        }
-
-        ul {
-            list-style-position: inside;
-            margin-left: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .curiosidades-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .curiosidade-item {
-            background-color: var(--cinza-claro);
-            padding: 1rem;
-            border-left: 4px solid var(--azul-franca);
-            border-radius: 0 8px 8px 0;
-        }
-
-        footer {
-            background-color: var(--cinza-escuro);
-            color: var(--branco);
-            text-align: center;
-            padding: 1.5rem 1rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: var(--ouro);
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Les Bleus na Copa do Mundo</h1>
-        <p>A trajetória, os títulos e as curiosidades de uma das maiores potências do futebol mundial</p>
-    </header>
-
-    <div class="container">
-        
-        <div class="grid-stats">
-            <div class="stat-card campeao">
-                <h3>2</h3>
-                <p><strong>Títulos Mundiais</strong><br>(1998 e 2018)</p>
-            </div>
-            <div class="stat-card">
-                <h3>4</h3>
-                <p><strong>Finais Disputadas</strong><br>(1998, 2006, 2018 e 2022)</p>
-            </div>
-            <div class="stat-card">
-                <h3>16</h3>
-                <p><strong>Participações</strong><br>Em Copas do Mundo</p>
-            </div>
-            <div class="stat-card">
-                <h3>13</h3>
-                <p><strong>Gols em uma edição</strong><br>Just Fontaine (1958)</p>
-            </div>
-        </div>
-
-        <section>
-            <h2>As Estrelas no Peito</h2>
-            <p style="margin-bottom: 1rem;">A França faz parte do seleto grupo de bicampeões mundiais, com duas campanhas históricas separadas por exatamente 20 anos:</p>
-            <ul>
-                <li><strong>1998 (Sede: França):</strong> Jogando em casa, os franceses liderados por Zinédine Zidane encantaram o mundo e venceram o Brasil na grande final por 3 a 0 no Stade de France.</li>
-                <li><strong>2018 (Sede: Rússia):</strong> Com uma geração jovem e avassaladora comandada por Kylian Mbappé e Antoine Griezmann, a França conquistou o bicampeonato ao derrotar a Croácia por 4 a 2 na final.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Dados Interessantes & Curiosidades</h2>
-            <div class="curiosidades-grid">
-                <div class="curiosidade-item">
-                    <strong>O Recorde Inabalável:</strong> Just Fontaine detém o recorde de mais gols marcados em uma única edição de Copa do Mundo. Ele balançou as redes 13 vezes na Copa de 1958, na Suécia.
-                </div>
-                <div class="curiosidade-item">
-                    <strong>O Clube Exclusivo de Deschamps:</strong> Didier Deschamps é uma das três únicas pessoas no mundo a vencer a Copa do Mundo como jogador (1998, sendo o capitão) e como treinador (2018). Os outros são Pelé/Zagallo e Franz Beckenbauer.
-                </div>
-                <div class="curiosidade-item
+        .stat-
