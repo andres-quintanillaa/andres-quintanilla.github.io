@@ -1,170 +1,148 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lora e Luna Marina</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Bunny</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f2eb;
+            color: #333;
+        }
 
-body{
-    background:linear-gradient(135deg,#4fc3f7,#01579b);
-    color:white;
-    overflow-x:hidden;
-}
+        header {
+            background-color: #e6dfd3;
+            color: #4a3b32;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px 16px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid #ffffff;
+        }
 
-header{
-    text-align:center;
-    padding:60px 20px;
-}
+        header h1 {
+            margin: 0 0 10px 0;
+        }
 
-header h1{
-    font-size:3rem;
-}
+        header p {
+            margin: 0;
+            opacity: 0.85;
+        }
 
-header p{
-    margin-top:15px;
-    font-size:1.2rem;
-}
+        main {
+            background-color: #faf8f5;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 32px 16px;
+            box-sizing: border-box;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
 
-.card{
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    padding:30px;
-    margin-bottom:30px;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-}
+            border: 1px solid #ffffff;
+            border-top: none;
+        }
 
-.card h2{
-    margin-bottom:15px;
-}
+        img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 16px;
+        }
 
-button{
-    background:#00e5ff;
-    color:#003;
-    border:none;
-    padding:15px 30px;
-    border-radius:50px;
-    cursor:pointer;
-    font-size:18px;
-    transition:.3s;
-}
+        main h2 {
+            margin: 0 0 8px 0;
+            color: #4a3b32;
+        }
 
-button:hover{
-    transform:scale(1.05);
-    background:white;
-}
+        .autor {
+            font-style: italic;
+            color: #666;
+            margin: 0 0 16px 0;
+        }
 
-footer{
-    text-align:center;
-    padding:30px;
-    opacity:.8;
-}
+        .mensagem {
+            font-size: 1.05rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
 
-.bolha{
-    position:fixed;
-    bottom:-80px;
-    border-radius:50%;
-    background:rgba(255,255,255,.25);
-    animation:subir linear infinite;
-}
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            background-color: #e6dfd3;
+            color: #4a3b32;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-@keyframes subir{
-    from{
-        transform:translateY(0);
-    }
-    to{
-        transform:translateY(-120vh);
-    }
-}
-</style>
+        button:hover {
+            background-color: #d8cebe;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-<h1>🐬 Lora e Luna Marina 🌊</h1>
-<p>Um mergulho em um mundo de aventura, amizade e oceano.</p>
-</header>
+    <header>
+        <h1>BAD BUNNY</h1>
+        <p>Bem-vindo ao artista</p>
+    </header>
 
-<div class="container">
+    <main>
+        <p><img src="bb.png" alt="Imagem do Bad Bunny"></p>
 
-<div class="card">
-<h2>Sobre</h2>
-<p>
-Bem-vindo ao universo de <strong>Lora e Luna Marina</strong>.
-Explore um ambiente inspirado pelo mar, cheio de criatividade,
-aventuras e diversão.
-</p>
-</div>
+        <h2>Bad Bunny</h2>
+        <p class="autor">Por: Andres Cabrera</p>
 
-<div class="card">
-<h2>Galeria</h2>
-<p>Você pode adicionar imagens, vídeos e histórias sobre Lora e Luna Marina.</p>
-</div>
+        <p class="mensagem">
+            Site sobre o Bad Bunny<br><br>
 
-<div class="card" style="text-align:center;">
-<h2>Interação</h2>
+            Aqui é o lugar certo pra quem curte as músicas dele, quer saber mais sobre a carreira e descobrir um pouco de Bad Bunny. Ele ficou famoso com o reggaeton e trap latino e, desde então, vem lançando músicas que dominam as paradas mundiais e falam de festas, relacionamentos e da cultura de Porto Rico.<br><br>
 
-<button onclick="mensagem()">
-Clique para uma surpresa 🌊
-</button>
+        </p>
 
-<p id="texto" style="margin-top:20px;font-size:22px;"></p>
+        <button>🐰 <span>0</span></button>
 
-</div>
+    </main>
 
-</div>
+    <main>
+        <p><img src="unveranosinti.png" alt="Imagem do album do Bad Bunny"></p>
 
-<footer>
-© 2026 • Lora e Luna Marina
-</footer>
+        <h2>Bad Bunny</h2>
+        <p class="autor">Por: Andres Cabrera</p>
+
+        <p class="mensagem">
+         
+            A música "DtMF", de Bad Bunny,a sua musica mais famosas do album recente, foi lançada em 2025 e fala sobre o estilo de vida de temas variados com o estilo dele. O album tambem feis um grande sucesso mundial e quebrou varios recordes.<br><br>
+        </p>
+
+        <button>🐰 <span>0</span></button>
+
+    </main>
 
 <script>
-function mensagem(){
-    const frases=[
-        "🐚 O oceano guarda muitos segredos!",
-        "🐬 A amizade é a maior aventura.",
-        "🌊 Cada onda traz uma nova história.",
-        "⭐ Continue explorando o mundo marinho!",
-        "🐠 Bem-vindo ao universo de Lora e Luna Marina!"
-    ];
+    const botoes = document.querySelectorAll("button");
 
-    const sorteio=Math.floor(Math.random()*frases.length);
-
-    document.getElementById("texto").innerHTML=frases[sorteio];
-}
-
-// Bolhas animadas
-for(let i=0;i<40;i++){
-
-    let b=document.createElement("div");
-    b.className="bolha";
-
-    let tamanho=Math.random()*40+10;
-
-    b.style.width=tamanho+"px";
-    b.style.height=tamanho+"px";
-    b.style.left=Math.random()*100+"vw";
-    b.style.animationDuration=(Math.random()*10+8)+"s";
-    b.style.animationDelay=Math.random()*8+"s";
-
-    document.body.appendChild(b);
-}
+    botoes.forEach(botao => {
+        botao.addEventListener("click", () => {
+            const texto = botao.querySelector("span");
+            texto.textContent++;
+        });
+    });
 </script>
-
 </body>
 </html>
