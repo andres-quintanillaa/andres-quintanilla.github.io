@@ -5,29 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rauw Alejandro</title>
     <style>
+        /* Transição suave para TODOS os elementos do site */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
         /* Variáveis de cores */
         :root {
-            /* Tema Claro: Tons de azul inspirados em VICE VERSA */
+            /* Tema Claro: VICE VERSA (Tons de Azul) */
             --bg-body: #eef4f8;
-            --bg-card: #f8fafc;
+            --bg-card: #ffffff;
             --bg-header: #dbeafe;
             --texto-principal: #1e293b;
             --texto-titulo: #1e3a8a;
             --borda: #bfdbfe;
             --btn-bg: #dbeafe;
             --link-cor: #2563eb;
+            --sombra: rgba(0, 0, 0, 0.08);
+            
+            /* Cor do botão flutuante no modo claro */
+            --btn-tema-bg: #1e3a8a;
+            --btn-tema-cor: #ffffff;
         }
 
-        /* Tema Escuro: Tons quentes/laranja inspirados em COSA NUESTRA */
+        /* Tema Escuro: COSA NUESTRA (Tons quentes/Laranja) */
         body.tema-escuro {
-            --bg-body: #180f0a;
-            --bg-card: #261912;
-            --bg-header: #3d2415;
+            --bg-body: #140b07;
+            --bg-card: #22140d;
+            --bg-header: #331d13;
             --texto-principal: #f3e8e2;
             --texto-titulo: #f97316;
-            --borda: #7c2d12;
+            --borda: #542211;
             --btn-bg: #431407;
             --link-cor: #fb923c;
+            --sombra: rgba(0, 0, 0, 0.4);
+
+            /* Destaque para o botão flutuante no modo escuro */
+            --btn-tema-bg: #ea580c;
+            --btn-tema-cor: #ffffff;
         }
 
         body {
@@ -36,7 +51,6 @@
             padding: 20px;
             background-color: var(--bg-body);
             color: var(--texto-principal);
-            transition: background-color 0.3s, color 0.3s;
         }
 
         header {
@@ -46,8 +60,9 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 24px 16px;
-            border-radius: 8px 8px 0 0;
+            border-radius: 12px 12px 0 0;
             border: 1px solid var(--borda);
+            box-shadow: 0 4px 12px var(--sombra);
         }
 
         header h1 { margin: 0 0 10px 0; }
@@ -57,25 +72,41 @@
             background-color: var(--bg-card);
             max-width: 800px;
             margin: 0 auto;
-            padding: 32px 16px;
+            padding: 32px 24px;
             box-sizing: border-box;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 6px 16px var(--sombra);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             border: 1px solid var(--borda);
             border-top: none;
-            gap: 32px;
+            gap: 28px;
+        }
+
+        /* Estilo dos cards/seções com efeito de profundidade (box-shadow) */
+        section {
+            background-color: var(--bg-card);
+            width: 100%;
+            max-width: 650px;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--borda);
+            box-shadow: 0 4px 10px var(--sombra);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         img {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             object-fit: cover;
             border-radius: 50%;
             margin-bottom: 16px;
+            box-shadow: 0 4px 8px var(--sombra);
         }
 
         h2 { margin: 0 0 8px 0; color: var(--texto-titulo); }
@@ -83,7 +114,6 @@
         
         .mensaje {
             font-size: 1.05rem;
-            max-width: 600px;
             line-height: 1.6;
             margin: 0;
         }
@@ -97,39 +127,43 @@
         .link-fonte:hover { text-decoration: underline; }
 
         .btn-curtir {
-            margin-top: 14px;
-            padding: 10px 20px;
+            margin-top: 16px;
+            padding: 10px 22px;
             font-size: 16px;
             border: 1px solid var(--borda);
-            border-radius: 8px;
+            border-radius: 20px;
             background-color: var(--btn-bg);
             color: var(--texto-titulo);
             cursor: pointer;
-            transition: 0.3s;
             font-weight: bold;
         }
 
         .btn-curtir:hover {
-            filter: brightness(0.95);
+            transform: scale(1.05);
         }
 
-        /* Botão Flutuante de Tema */
+        /* Botão Flutuante com destaque corrigido para ambos os temas */
         .btn-tema-escuro {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            font-size: 24px;
-            padding: 12px;
-            background-color: var(--bg-header);
+            bottom: 24px;
+            right: 24px;
+            font-size: 22px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--btn-tema-bg);
+            color: var(--btn-tema-cor);
             border-radius: 50%;
-            border: 1px solid var(--borda);
+            border: 2px solid var(--borda);
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            transition: transform 0.2s;
+            box-shadow: 0 4px 14px var(--sombra);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
         }
 
         .btn-tema-escuro:hover {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
     </style>
 </head>
@@ -171,7 +205,7 @@
             <button class="btn-curtir">❤️ <span>0</span></button>
         </section>
 
-        <!-- Botão Flutuante -->
+        <!-- Botão Flutuante do Tema -->
         <button class="btn-tema-escuro">🌙</button>
     </main>
 
@@ -185,7 +219,7 @@
             });
         });
 
-        // Lógica de alternância de tema
+        // Lógica de alternância do tema escuro/claro
         const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
 
         function mudaTema() {
