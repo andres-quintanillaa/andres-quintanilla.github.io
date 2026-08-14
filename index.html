@@ -5,32 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rauw Alejandro</title>
     <style>
+        /* Variáveis de cores */
+        :root {
+            /* Tema Claro: Tons de azul inspirados em VICE VERSA */
+            --bg-body: #eef4f8;
+            --bg-card: #f8fafc;
+            --bg-header: #dbeafe;
+            --texto-principal: #1e293b;
+            --texto-titulo: #1e3a8a;
+            --borda: #bfdbfe;
+            --btn-bg: #dbeafe;
+            --link-cor: #2563eb;
+        }
+
+        /* Tema Escuro: Tons quentes/laranja inspirados em COSA NUESTRA */
+        body.tema-escuro {
+            --bg-body: #180f0a;
+            --bg-card: #261912;
+            --bg-header: #3d2415;
+            --texto-principal: #f3e8e2;
+            --texto-titulo: #f97316;
+            --borda: #7c2d12;
+            --btn-bg: #431407;
+            --link-cor: #fb923c;
+        }
+
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f5f2eb;
-            color: #333;
+            background-color: var(--bg-body);
+            color: var(--texto-principal);
+            transition: background-color 0.3s, color 0.3s;
         }
+
         header {
-            background-color: #e6dfd3;
-            color: #4a3b32;
+            background-color: var(--bg-header);
+            color: var(--texto-titulo);
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
             padding: 24px 16px;
             border-radius: 8px 8px 0 0;
-            border: 1px solid #ffffff;
+            border: 1px solid var(--borda);
         }
-        header h1 {
-            margin: 0 0 10px 0;
-        }
-        header p {
-            margin: 0;
-            opacity: 0.85;
-        }
+
+        header h1 { margin: 0 0 10px 0; }
+        header p { margin: 0; opacity: 0.85; }
+
         main {
-            background-color: #faf8f5;
+            background-color: var(--bg-card);
             max-width: 800px;
             margin: 0 auto;
             padding: 32px 16px;
@@ -41,10 +65,11 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            border: 1px solid #ffffff;
+            border: 1px solid var(--borda);
             border-top: none;
             gap: 32px;
         }
+
         img {
             width: 120px;
             height: 120px;
@@ -52,43 +77,59 @@
             border-radius: 50%;
             margin-bottom: 16px;
         }
-        h2 {
-            margin: 0 0 8px 0;
-            color: #4a3b32;
-        }
-        .autor {
-            font-style: italic;
-            color: #666;
-            margin: 0 0 16px 0;
-        }
+
+        h2 { margin: 0 0 8px 0; color: var(--texto-titulo); }
+        .autor { font-style: italic; opacity: 0.7; margin: 0 0 16px 0; }
+        
         .mensaje {
             font-size: 1.05rem;
             max-width: 600px;
             line-height: 1.6;
             margin: 0;
         }
+
         .link-fonte {
-            color: #1ed760;
+            color: var(--link-cor);
             font-weight: bold;
             text-decoration: none;
         }
-        .link-fonte:hover {
-            text-decoration: underline;
-        }
-        button {
+
+        .link-fonte:hover { text-decoration: underline; }
+
+        .btn-curtir {
             margin-top: 14px;
             padding: 10px 20px;
             font-size: 16px;
-            border: none;
+            border: 1px solid var(--borda);
             border-radius: 8px;
-            background-color: #e6dfd3;
-            color: #4a3b32;
+            background-color: var(--btn-bg);
+            color: var(--texto-titulo);
             cursor: pointer;
             transition: 0.3s;
             font-weight: bold;
         }
-        button:hover {
-            background-color: #d8cebe;
+
+        .btn-curtir:hover {
+            filter: brightness(0.95);
+        }
+
+        /* Botão Flutuante de Tema */
+        .btn-tema-escuro {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            padding: 12px;
+            background-color: var(--bg-header);
+            border-radius: 50%;
+            border: 1px solid var(--borda);
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+
+        .btn-tema-escuro:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -107,7 +148,7 @@
                 Sitio sobre Rauw Alejandro.<br><br>
                 Es un cantante puertorriqueño de reggaeton y R&B latino. Famoso por músicas y álbumes como “VICE VERSA” y “COSA NUESTRA”.
             </p>
-            <button>❤️ <span>0</span></button>
+            <button class="btn-curtir">❤️ <span>0</span></button>
         </section>
 
         <section>
@@ -115,7 +156,7 @@
             <p class="mensaje">
                 Su música es una mezcla de reggaeton, trap y pop. Sus canciones más conocidas son "Qué Pasaría", "Tiroteo", "El Efecto", "Khé?", "Todo De Ti", "Desesperados", "Santa", "Party" y "Aquel Nap ZzZz".
             </p>
-            <button>❤️ <span>0</span></button>
+            <button class="btn-curtir">❤️ <span>0</span></button>
         </section>
 
         <section>
@@ -124,22 +165,42 @@
                 "Cosa Nuestra" marca una etapa de madurez artística para Rauw Alejandro, donde fusiona sus raíces caribeñas y los ritmos urbanos contemporáneos con influencias clásicas de la salsa y la cultura neoyorquina de los años 70.
             </p>
             <br>
-            <!-- Link configurado para abrir em nova aba -->
             <p class="mensaje">
                 Escucha su discografía oficial en <a class="link-fonte" href="https://open.spotify.com/artist/13ubrt8QOOCRjR31L9NK39" target="_blank">Spotify</a>.
             </p>
-            <button>❤️ <span>0</span></button>
+            <button class="btn-curtir">❤️ <span>0</span></button>
         </section>
+
+        <!-- Botão Flutuante -->
+        <button class="btn-tema-escuro">🌙</button>
     </main>
 
     <script>
-        const botoes = document.querySelectorAll("button");
+        // Lógica de curtidas
+        const botoes = document.querySelectorAll(".btn-curtir");
         botoes.forEach(botao => {
             botao.addEventListener("click", () => {
                 const texto = botao.querySelector("span");
                 texto.textContent = Number(texto.textContent) + 1;
             });
         });
+
+        // Lógica de alternância de tema
+        const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
+
+        function mudaTema() {
+            const corpoPagina = document.body;
+
+            if (corpoPagina.classList.contains("tema-escuro")) {
+                corpoPagina.classList.remove("tema-escuro");
+                btnTemaEscuro.textContent = "🌙";
+            } else {
+                corpoPagina.classList.add("tema-escuro");
+                btnTemaEscuro.textContent = "☀️";
+            }
+        }
+
+        btnTemaEscuro.addEventListener("click", mudaTema);
     </script>
 </body>
 </html>
