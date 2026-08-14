@@ -43,6 +43,7 @@
             text-align: center;
             border: 1px solid #ffffff;
             border-top: none;
+            gap: 24px; /* Adiciona espaçamento entre as seções */
         }
         img {
             width: 120px;
@@ -51,7 +52,7 @@
             border-radius: 50%;
             margin-bottom: 16px;
         }
-        main h2 {
+        h2 {
             margin: 0 0 8px 0;
             color: #4a3b32;
         }
@@ -64,17 +65,19 @@
             font-size: 1.05rem;
             max-width: 600px;
             line-height: 1.6;
+            margin: 0;
         }
         button {
-            margin-top: 20px;
+            margin-top: 10px;
             padding: 10px 20px;
-            font-size: 18px;
+            font-size: 16px;
             border: none;
             border-radius: 8px;
             background-color: #e6dfd3;
             color: #4a3b32;
             cursor: pointer;
             transition: 0.3s;
+            font-weight: bold;
         }
         button:hover {
             background-color: #d8cebe;
@@ -86,29 +89,36 @@
         <h1>RAUW ALEJANDRO</h1>
         <p>Bienvenido al artista</p>
     </header>
+    
     <main>
-        <img src="VICE_VERSA.png" alt="Vice Versa">
-        <h2>Rauw Alejandro</h2>
-        <p class="autor">Por: Andres Cabrera</p>
-        <p class="mensaje">
-            Sitio sobre Rauw Alejandro.<br><br>
-            Es un cantante puertorriqueño de reggaeton y R&B latino. Famoso por músicas y álbumes como “VICE VERSA” y “COSA NUESTRA”.
-        </p>
+        <section>
+            <img src="VICE_VERSA.png" alt="Vice Versa">
+            <h2>Rauw Alejandro</h2>
+            <p class="autor">Por: Andres Cabrera</p>
+            <p class="mensaje">
+                Sitio sobre Rauw Alejandro.<br><br>
+                Es un cantante puertorriqueño de reggaeton y R&B latino. Famoso por músicas y álbumes como “VICE VERSA” y “COSA NUESTRA”.
+            </p>
+        </section>
+
+        <section>
+            <h2>Estilo y Éxitos</h2>
+            <p class="mensaje">
+                Su música es una mezcla de reggaeton, trap y pop. Sus canciones más conocidas son "Qué Pasaría", "Tiroteo", "El Efecto", "Khé?", "Todo De Ti", "Desesperados", "Santa", "Party" y "Aquel Nap ZzZz".
+            </p>
+            <!-- Botão adicionado para o script funcionar -->
+            <button>❤️ Me gusta: <span>0</span></button>
+        </section>
     </main>
-    <main>
-        <h2>Rauw Alejandro</h2>
-        <p class="mensaje">
-            Su música es una mezcla de reggaeton, trap y pop. Sus canciones más conocidas son "Qué Pasaría", "Tiroteo", "El Efecto", "Khé?", "Todo De Ti", "Desesperados", "Santa", "Party" y "Aquel Nap ZzZz".
-        </p>
-    </main>
-<script>
-    const botoes = document.querySelectorAll("button");
-    botoes.forEach(botao => {
-        botao.addEventListener("click", () => {
-            const texto = botao.querySelector("span");
-            texto.textContent++;
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+        botoes.forEach(botao => {
+            botao.addEventListener("click", () => {
+                const texto = botao.querySelector("span");
+                texto.textContent = Number(texto.textContent) + 1;
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>
